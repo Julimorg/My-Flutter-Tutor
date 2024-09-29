@@ -1,11 +1,91 @@
 // 1. import thư viện
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/RichText.dart';
+import 'package:flutter_application_1/TextStyleTutor.dart';
+import 'package:flutter_application_1/elevatedButton.dart';
+import 'package:flutter_application_1/outlineButton.dart';
+import 'package:flutter_application_1/paddingMargin.dart';
+import 'package:flutter_application_1/textButton.dart';
+import 'package:flutter_application_1/textButtonDisableEvent.dart';
 
 // 2. Hàm Main
 void main() {
   // 3. Khởi động app
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     // Sử dụng thành phần xây dựng giao diện người dùng
-    home: Text("Hello World"),
+    // SafeArea được dùng để cố định các componet hay element trong khung hình điện thoại
+    // Scaffold là được dùng cố định trong khung màn hình
+    // Center giúp element cố định chính giữa khung hình
+    home: SafeArea(
+      child: Scaffold(body: MyWidget_Stateless()),
+    ),
+    // Xóa hiện thị của debug trên khung hình
+    debugShowCheckedModeBanner: false,
   )); // MaterialApp
 }
+
+// Tự custom class kế thừa StatelessWidget
+class MyWidget_Stateless extends StatelessWidget {
+  // Hàm build
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return const Scaffold(
+      body: SafeArea(
+          child: Column(
+        children: [
+          TextStyleTutor(),
+          RichTextClass(),
+          PaddingMarginClass(),
+          TextButtonClass(),
+          TextButtonDisableEVent(),
+          ElevatedButtonClass(),
+          OutlineButtonClass(),
+        ],
+      )),
+    );
+  }
+}
+
+// Tự custom class kế thừa StatefullWidget
+// class MyWiget_Statefull extends StatefulWidget {
+//   final bool loading;
+
+//   // Constructor
+//   MyWiget_Statefull(this.loading);
+
+//   @override
+//   State<StatefulWidget> createState() {
+//     // TODO: implement createState
+//     return MyWiget_Statefull2();
+//   }
+// }
+
+// class MyWiget_Statefull2 extends State<MyWiget_Statefull> {
+//   late bool _localLoading;
+
+//   // Hàm InitState sẽ là hàm gọi sau khi khởi tạo class kế thừa Stateful và chạy trước hàm Buil phía dưới
+//   @override
+//   void initState() {
+//     // TODO: implement initState
+//     _localLoading = widget.loading;
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+// Method if else
+// Nếu loading trả về = true thì sẽ in ra vòng tròn loading còn ko thì hiện text
+// CircularProgressIndicator chính là vòng tròn loading
+// FloatingActionButton chinh la button
+//     // TODO: implement build
+//     return _localLoading
+//         ? const CircularProgressIndicator()
+//         : FloatingActionButton(onPressed: onClickButton);
+//   }
+
+//   void onClickButton() {
+//     setState(() {
+//       _localLoading = true;
+//     });
+//   }
+// }
