@@ -1,10 +1,16 @@
 // 1. import thư viện
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ColumnClass.dart';
+import 'package:flutter_application_1/Container.dart';
+import 'package:flutter_application_1/ExpandedClass.dart';
 import 'package:flutter_application_1/RichText.dart';
+import 'package:flutter_application_1/RowClass.dart';
+import 'package:flutter_application_1/SizedBox.dart';
 import 'package:flutter_application_1/TextStyleTutor.dart';
 import 'package:flutter_application_1/elevatedButton.dart';
 import 'package:flutter_application_1/outlineButton.dart';
 import 'package:flutter_application_1/paddingMargin.dart';
+import 'package:flutter_application_1/practice1.dart';
 import 'package:flutter_application_1/textButton.dart';
 import 'package:flutter_application_1/textButtonDisableEvent.dart';
 
@@ -34,13 +40,21 @@ class MyWidget_Stateless extends StatelessWidget {
       body: SafeArea(
           child: Column(
         children: [
-          TextStyleTutor(),
-          RichTextClass(),
-          PaddingMarginClass(),
-          TextButtonClass(),
-          TextButtonDisableEVent(),
-          ElevatedButtonClass(),
-          OutlineButtonClass(),
+          // Hãy bỏ comment và chạy từng cái sẽ xem trực quang hơn
+
+          // TextStyleTutor(),
+          // RichTextClass(),
+          // PaddingMarginClass(),
+          // TextButtonClass(),
+          // TextButtonDisableEVent(),
+          // ElevatedButtonClass(),
+          // OutlineButtonClass(),
+          // ContainerClass(),
+          // SizeBoxClass(),
+          // RowClass(),
+          // ColumnClassTutor(),
+          // ExpandedClass(),
+          Practice1(),
         ],
       )),
     );
