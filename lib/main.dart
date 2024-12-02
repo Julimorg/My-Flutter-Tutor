@@ -39,68 +39,7 @@ class MyWidget_Stateless extends StatelessWidget {
     // TODO: implement build
     return const Scaffold(
       body: SafeArea(
-          child: Column(
-        children: [
-          // Hãy bỏ comment và chạy từng cái sẽ xem trực quang hơn
-          Gridviewtolistbuild(),
-          // TextStyleTutor(),
-          // RichTextClass(),
-          // PaddingMarginClass(),
-          // TextButtonClass(),
-          // TextButtonDisableEVent(),
-          // ElevatedButtonClass(),
-          // OutlineButtonClass(),
-          // ContainerClass(),
-          // SizeBoxClass(),
-          // RowClass(),
-          // ColumnClassTutor(),
-          // ExpandedClass(),
-          Practice1(),
-        ],
-      )),
+          child: Gridviewtolistbuild()),
     );
   }
 }
-
-// Tự custom class kế thừa StatefullWidget
-// class MyWiget_Statefull extends StatefulWidget {
-//   final bool loading;
-
-//   // Constructor
-//   MyWiget_Statefull(this.loading);
-
-//   @override
-//   State<StatefulWidget> createState() {
-//     // TODO: implement createState
-//     return MyWiget_Statefull2();
-//   }
-// }
-
-// class MyWiget_Statefull2 extends State<MyWiget_Statefull> {
-//   late bool _localLoading;
-
-//   // Hàm InitState sẽ là hàm gọi sau khi khởi tạo class kế thừa Stateful và chạy trước hàm Buil phía dưới
-//   @override
-//   void initState() {
-//     // TODO: implement initState
-//     _localLoading = widget.loading;
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-// Method if else
-// Nếu loading trả về = true thì sẽ in ra vòng tròn loading còn ko thì hiện text
-// CircularProgressIndicator chính là vòng tròn loading
-// FloatingActionButton chinh la button
-//     // TODO: implement build
-//     return _localLoading
-//         ? const CircularProgressIndicator()
-//         : FloatingActionButton(onPressed: onClickButton);
-//   }
-
-//   void onClickButton() {
-//     setState(() {
-//       _localLoading = true;
-//     });
-//   }
-// }
